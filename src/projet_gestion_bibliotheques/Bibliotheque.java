@@ -10,6 +10,9 @@ public class Bibliotheque {
 	 
 	 public static int nombreDeBibliotheque = 0;
 	 
+	 final static int capaciteVisiteursMin = 30;
+	 final static int capaciteVisiteursMax = 250;
+	 
 	 //Il n'y a qu'une seule bibliothèque par ville.
 	 
 // public static String[] mesVilles = new String[50]; avec cette commande nous pouvons créer une liste avec les villes existante.
@@ -22,9 +25,10 @@ public class Bibliotheque {
 	public String getVille() {
 		return ville;
 	}
+	//if (mesVilles.contains(ville) == false) ?? 
 	
 	public void setVille(String ville) {
-		if (mesVilles.contains(ville)) {
+		if (!mesVilles.contains(ville)) {
 			
 		}
 		this.ville = ville;
@@ -35,9 +39,21 @@ public class Bibliotheque {
 	public int getCapaciteVisiteurs() {
 		return capaciteVisiteurs;
 	}
+	
 	public void setCapaciteVisiteurs(int capaciteVisiteurs) {
+		if (capaciteVisiteurs < capaciteVisiteursMin && capaciteVisiteurs < capaciteVisiteursMax) {
+			
+            System.out.println("Vous pouvez rentrer un visiteur ");
+		}
+		else  {
+            System.out.println("Attention, la capacité visiteurs est en dehors des limites");
+		}
 		this.capaciteVisiteurs = capaciteVisiteurs;
+		
+	return;
 	}
+	
+
 	
 	
 	public int getcapaciteObjets() {

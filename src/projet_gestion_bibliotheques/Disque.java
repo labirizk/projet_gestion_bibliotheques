@@ -17,14 +17,11 @@ public class Disque extends Objet{
 	}
 	public void setDateDeSortie(LocalDateTime dateDeSortie) {
 		this.dateDeSortie = dateDeSortie;
-	} 
-	
-	
-	public Disque(String interprete, LocalDateTime dateDeSortie) {
-		super();
+	}
+	public Disque(String titre, long reference, Bibliotheque bib, String interprete, LocalDateTime dateDeSortie) {
+		super(titre, reference, bib);
 		this.interprete = interprete;
 		this.dateDeSortie = dateDeSortie;
-
 	}
 
 }
