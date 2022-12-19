@@ -39,7 +39,7 @@ public class Employe extends Personne{
 	}
 	///  CONSTRUCTEURS
 	public Employe(String nom, String prenom, String adresse, LocalDateTime dateEmbauche, Float salaire, String service,
-			Poste posteb) {
+			Poste poste) {
 		super(nom, prenom, adresse);
 		this.dateEmbauche = dateEmbauche;
 		this.salaire = salaire;

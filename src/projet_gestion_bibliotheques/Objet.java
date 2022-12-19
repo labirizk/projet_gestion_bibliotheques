@@ -26,4 +26,8 @@ public class Objet {
 		this.reference = reference;
 	}
 
+	@Override
+	  public String toString() {
+	    return this.getTitre()+ " dont la rérérence est "+ this.getReference();
+	  }
 }

@@ -37,6 +37,11 @@ public class Livre extends Objet{
 	}
 	
 	
+	@Override
+	  public String toString() {
+	    return super.getTitre()+ " edité par "+ this.editeur + ". Titre" + super.getTitre();
+	  }
+
 
 
 

@@ -42,10 +42,10 @@ public class Bibliotheque {
 	
 	public void setVille(String ville) {
 		if (!mesVilles.contains(ville)) {
-			
+			this.ville = ville;
+			mesVilles.add(ville);
 		}
-		this.ville = ville;
-		mesVilles.add(ville);
+		return;
 	}
 	//La capacité visiteurs varient de 30 à 250 visiteurs/jours
 
@@ -98,11 +98,51 @@ public class Bibliotheque {
 		this.nombreEmployes = nombreEmployes;
 		return;
 	}
-	///  CONSTRUCTEURS
-	public Bibliotheque () {
-        Bibliotheque.nombreDeBibliotheque += 1;
-    }
-   
+	
+	public Employe getDirecteur() {
+		return directeur;
+	}
 
+	public void setDirecteur(Employe directeur) {
+		this.directeur = directeur;
+	}
+
+	public LinkedList<Employe> getListEmploye() {
+		return listEmploye;
+	}
+
+	public void setListEmploye(LinkedList<Employe> listEmploye) {
+		this.listEmploye = listEmploye;
+	}
+
+	public LinkedList<Membre> getListMembre() {
+		return listMembre;
+	}
+
+	public void setListMembre(LinkedList<Membre> listMembre) {
+		this.listMembre = listMembre;
+	}
+
+	public LinkedList<Objet> getListObjet() {
+		return listObjet;
+	}
+
+	public void setListObjet(LinkedList<Objet> listObjet) {
+		this.listObjet = listObjet;
+	}
+
+	///  CONSTRUCTEURS
+	///  CONSTRUCTEURS
+    public Bibliotheque(String ville, int capaciteVisiteurs, int capaciteObjets, int nombreEmployes, Employe directeur,
+            LinkedList<Employe> listEmploye, LinkedList<Membre> listMembre, LinkedList<Objet> listObjet) {
+        this.ville = ville;
+        this.capaciteVisiteurs = capaciteVisiteurs;
+        this.capaciteObjets = capaciteObjets;
+        this.nombreEmployes = nombreEmployes;
+        this.directeur = directeur;
+        this.listEmploye = listEmploye;
+        this.listMembre = listMembre;
+        this.listObjet = listObjet;
+    }
     
 }

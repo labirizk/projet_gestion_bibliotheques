@@ -22,6 +22,12 @@ public class Disque extends Objet{
 		super(titre, reference);
 		this.interprete = interprete;
 		this.dateDeSortie = dateDeSortie;
+		
 	}
+	
+	@Override
+	  public String toString() {
+	    return super.getTitre()+ " dont l'interprète est "+ this.interprete + " sortie le " + this.dateDeSortie  ;
+	  }
 
 }
