@@ -7,11 +7,19 @@ public class Bibliotheque {
 	 private String ville;
 	 private int capaciteVisiteurs;
 	 private int capaciteObjets;
+	 private int nombreEmployes;
 	 
 	 public static int nombreDeBibliotheque = 0;
 	 
 	 final static int capaciteVisiteursMin = 30;
 	 final static int capaciteVisiteursMax = 250;
+	 
+	 final static int capaciteObjectssMin = 1000;
+	 final static int capaciteObjectssMax = 150000;
+	 
+	 final static int nombreEmployeMin = 10;
+	 final static int nombreEmployeMax = 100;
+	 
 	 
 	 //Il n'y a qu'une seule bibliothèque par ville.
 	 
@@ -41,7 +49,7 @@ public class Bibliotheque {
 	}
 	
 	public void setCapaciteVisiteurs(int capaciteVisiteurs) {
-		if (capaciteVisiteurs < capaciteVisiteursMin && capaciteVisiteurs < capaciteVisiteursMax) {
+		if (capaciteVisiteurs > capaciteVisiteursMin && capaciteVisiteurs < capaciteVisiteursMax) {
 			
             System.out.println("Vous pouvez rentrer un visiteur ");
 		}
@@ -55,17 +63,48 @@ public class Bibliotheque {
 	
 
 	
-	
 	public int getcapaciteObjets() {
 		return capaciteObjets;
 	}
+	
+	// La capacité items varie de 1000 à 150 000 items par bibliothèque.
 	public void setcapaciteObjets(int capaciteObjets) {
+		if (capaciteObjets > capaciteObjectssMin && capaciteObjets < capaciteObjectssMax) {
+			System.out.println("Vous pouvez rentrer un objet");
+		}
+		else {
+			 System.out.println("Attention, la capacité des objets est en dehors des limites");	
+		}
 		this.capaciteObjets = capaciteObjets;
+		return;
 	}
 	
+	// Le nombre d'employé varie de 10 à 100 par bibliothèque.
+	
+	public int getNombreEmployes() {
+		return nombreEmployes;
+	}
+		
+	public void setNombreEmploye(int nombreEmployes) {
+		if (nombreEmployes > nombreEmployeMin && nombreEmployes < nombreEmployeMax) {
+	            System.out.println("Vous pouvez ajouter une biliothèque avec ce nombre d'employés");
+		}
+		else  {
+	            System.out.println("Attention, le nombre d'employés dépasse les limites");
+		}
+		this.nombreEmployes = nombreEmployes;
+		return;
+	}
 	///  CONSTRUCTEURS
-    public Bibliotheque () {
+	public Bibliotheque () {
         Bibliotheque.nombreDeBibliotheque += 1;
     }
    
+    
+    
+    
+    
+    
+    
+    
 }
