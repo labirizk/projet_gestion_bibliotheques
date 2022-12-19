@@ -1,5 +1,10 @@
 package projet_gestion_bibliotheques;
 
-public class Membre {
+import java.time.LocalDateTime;
 
+public class Membre extends Personne{
+	
+	/// Attributs
+    private LocalDateTime date_inscription;
+    
 }
