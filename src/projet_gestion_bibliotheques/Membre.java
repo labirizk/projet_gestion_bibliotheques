@@ -6,6 +6,7 @@ public class Membre extends Personne{
 	
 	/// Attributs
     private LocalDateTime date_inscription;
+    private Bibliotheque bib;
     
     public static int nombreMembres = 0;
 
@@ -19,10 +20,11 @@ public class Membre extends Personne{
 	}
 
 	///  CONSTRUCTEURS
-	public Membre(String nom, String prenom, String adresse, LocalDateTime date_inscription) {
+	public Membre(String nom, String prenom, String adresse, LocalDateTime date_inscription, Bibliotheque bib) {
 		super(nom, prenom, adresse);
 		Membre.nombreMembres += 1;
 		this.date_inscription = date_inscription;
+		this.bib = bib;
 	}
     
 }

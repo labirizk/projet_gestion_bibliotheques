@@ -8,14 +8,15 @@ public class Bibliotheque {
 	 private int capaciteVisiteurs;
 	 private int capaciteObjets;
 	 private int nombreEmployes;
+
 	 
 	 public static int nombreDeBibliotheque = 0;
 	 
 	 final static int capaciteVisiteursMin = 30;
 	 final static int capaciteVisiteursMax = 250;
 	 
-	 final static int capaciteObjectssMin = 1000;
-	 final static int capaciteObjectssMax = 150000;
+	 final static int capaciteObjectsMin = 1000;
+	 final static int capaciteObjectsMax = 150000;
 	 
 	 final static int nombreEmployeMin = 10;
 	 final static int nombreEmployeMax = 100;
@@ -61,15 +62,13 @@ public class Bibliotheque {
 	return;
 	}
 	
-
-	
 	public int getcapaciteObjets() {
 		return capaciteObjets;
 	}
 	
 	// La capacité items varie de 1000 à 150 000 items par bibliothèque.
 	public void setcapaciteObjets(int capaciteObjets) {
-		if (capaciteObjets > capaciteObjectssMin && capaciteObjets < capaciteObjectssMax) {
+		if (capaciteObjets > capaciteObjectsMin && capaciteObjets < capaciteObjectsMax) {
 			System.out.println("Vous pouvez rentrer un objet");
 		}
 		else {
@@ -100,11 +99,6 @@ public class Bibliotheque {
         Bibliotheque.nombreDeBibliotheque += 1;
     }
    
-    
-    
-    
-    
-    
-    
+
     
 }
