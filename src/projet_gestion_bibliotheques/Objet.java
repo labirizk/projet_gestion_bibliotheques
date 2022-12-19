@@ -5,7 +5,6 @@ public class Objet {
 	//CLASSE MERE 
 	private String titre;
 	private long reference;
-	private Bibliotheque bib;
 	
 	public String getTitre() {
 		return titre;
@@ -22,10 +21,9 @@ public class Objet {
 	
 	// un objet n'a jamais la meme reference dans deux bibliotheque différente
 	
-	public Objet(String titre, long reference, Bibliotheque bib) {
+	public Objet(String titre, long reference) {
 		this.titre = titre;
 		this.reference = reference;
-		this.bib=bib;
 	}
 
 }

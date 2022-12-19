@@ -8,6 +8,10 @@ public class Bibliotheque {
 	 private int capaciteVisiteurs;
 	 private int capaciteObjets;
 	 private int nombreEmployes;
+	 private Employe directeur;
+	 private LinkedList<Employe> listEmploye;
+	 private LinkedList<Membre> listMembre;
+	 private LinkedList<Objet> listObjet;
 
 	 
 	 public static int nombreDeBibliotheque = 0;

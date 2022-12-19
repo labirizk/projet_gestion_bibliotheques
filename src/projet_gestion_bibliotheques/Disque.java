@@ -19,7 +19,7 @@ public class Disque extends Objet{
 		this.dateDeSortie = dateDeSortie;
 	}
 	public Disque(String titre, long reference, Bibliotheque bib, String interprete, LocalDateTime dateDeSortie) {
-		super(titre, reference, bib);
+		super(titre, reference);
 		this.interprete = interprete;
 		this.dateDeSortie = dateDeSortie;
 	}

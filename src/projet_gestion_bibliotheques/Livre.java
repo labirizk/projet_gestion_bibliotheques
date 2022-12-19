@@ -30,7 +30,7 @@ public class Livre extends Objet{
 	}
 	public Livre(String titre, long reference, Bibliotheque bib, String auteur, String editeur,
 			LocalDateTime dateDeParution) {
-		super(titre, reference, bib);
+		super(titre, reference);
 		this.auteur = auteur;
 		this.editeur = editeur;
 		this.dateDeParution = dateDeParution;

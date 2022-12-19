@@ -9,7 +9,6 @@ public class Employe extends Personne{
     private Float salaire;
     private String service;
     private Poste poste;
-    private Bibliotheque bib;
     
     public static int nombreEmployes = 0;
     
@@ -40,13 +39,12 @@ public class Employe extends Personne{
 	}
 	///  CONSTRUCTEURS
 	public Employe(String nom, String prenom, String adresse, LocalDateTime dateEmbauche, Float salaire, String service,
-			Poste poste, Bibliotheque bib) {
+			Poste posteb) {
 		super(nom, prenom, adresse);
 		this.dateEmbauche = dateEmbauche;
 		this.salaire = salaire;
 		this.service = service;
 		this.poste = poste;
-		this.bib = bib;
 	}
 	
 
