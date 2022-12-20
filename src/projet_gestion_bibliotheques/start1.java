@@ -153,13 +153,21 @@ public class start1 {
         
         // Polymorphisme Etape 2: allons placer nos objets dans une array objet.
         
-        Objet [] objets = new Objet[4];
+        Objet [] objets = new Objet[10];
        
         objets[0] = new Livre("A la recherche du temps perdu",259713649525L, bibToulouse ," Marcel Proust", "Albert Camus",s11);
         objets[1] = new Livre("Voyage au bout de la nuit", 22697462L, bibToulouse, " Louis-Ferdinand Céline", "Guillaume Apollinaire",s12);
         objets[2] = new Disque("Back in Black", 216336226L, bibToulouse, "AC/DC", sd11);
         objets[3] = new Disque("The Dark Side of the Moon",2247962L,bibToulouse, "Pink Floyd", sd12);
         
+        objets[4] = new Livre("Le monde s'effondre",25971364953L, bibToulouse ,"Chinua Achebe", "	Heinemann",s11);
+        objets[5] = new Livre("Décaméron", 226978L, bibToulouse, "Boccace", "Inconnu",s12);
+        objets[6] = new Livre("L'Étranger",25971363225L, bibToulouse ," Marcel Proust", "	Éditions Gallimard",s11);
+        objets[7] = new Livre("Nostromo", 226782L, bibToulouse, " Louis-Ferdinand Céline", "Harper & Brothers",s12);
+        
+        objets[8] = new Disque("Thriller", 216786226L, bibToulouse, "Michael Jackson", sd11);
+        objets[9] = new Disque("The Bodyguard",2241262L, bibToulouse, "Whitney Houston", sd12);
+       
         // Je veux afficher tous les titres que comporte mon array on fait avec une boucle for.
          for (Objet objet:objets) {
         	 System.out.println("Le titre est : "+objet.getTitre());
