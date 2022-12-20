@@ -146,8 +146,7 @@ public class start1 {
         Objet di121 = new Disque("The Dark Side of the Moon",2247962L,bibSophia, "Pink Floyd", sd12);
         
         
-        // Polymorphisme Etape 2: allons placer nos objets dans une array objet.
-        
+        //A la compilation, Java vérifie que la méthode appelée existe dans la classe contenant l'objet.
         Objet [] objets = new Objet[10];
        
         objets[0] = new Livre("A la recherche du temps perdu",259713649525L, bibToulouse ," Marcel Proust", "Albert Camus",s11);
@@ -180,7 +179,8 @@ public class start1 {
         	 }
          }  
         ///////////////////// Faire polymorphgisme avec les fonctions toString Poly Overriding //////////////////////////
-        //Le polymorphisme est la substitution à l'exécution un appel de la méthode toString de la classe mère  objet la méthode toString spécifique à chaque sous classe Livre et Disque. 
+        // Overriding est une forme de polymorphisme pour lier dynamiquement la méthode toString de la sous-classe en réponse à un appel de méthode toString d'un objet de la sous-classe référencé (livre et disque) par le type de la class mère Objet .
+        // A la compilation, Java vérifie que la méthode appelée existe dans la classe contenant l'objet . 
          
          for (Objet objet:objets) {
         	 System.out.println(objet.toString());
