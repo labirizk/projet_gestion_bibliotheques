@@ -173,17 +173,21 @@ public class start1 {
          for (Objet objet:objets) {
         	 if(objet instanceof Livre){
         		 
-        		 System.out.println("Le titre est : "+((Livre)objet).getEditeur());
+        		 System.out.println("L'éditeur du livre est : "+((Livre)objet).getEditeur());
         	 }
         	 else {
-        		 System.out.println("Le titre est : "+((Disque)objet).getInterprete());
+        		 System.out.println("L'interprète du disque est : "+((Disque)objet).getInterprete());
         	 }
-         }
-        
-        ///////////////////// Faire polymorphgisme pour les fonctions toString//////////////////////////
+         }  
+        ///////////////////// Faire polymorphgisme avec les fonctions toString//////////////////////////
 		
          
+         for (Objet objet:objets) {
+        	 System.out.println(objet.toString());
+         }
+         
 		// println pour essayer le modèle de données et les classes
+         
 		int capaciteObjBibToulouse = bibToulouse.getcapaciteObjets();
 		int capaciteVisBibToulouse = bibToulouse.getCapaciteVisiteurs();
 		Employe directeurBibToulouse = bibToulouse.getDirecteur();
@@ -192,11 +196,15 @@ public class start1 {
 		LinkedList<Objet> lstObjBibToulouse = bibToulouse.getListObjet();
 		int nbEmpBibToulouse = bibToulouse.getNombreEmployes();
 		String villeBibToulouse = bibToulouse.getVille();
-		
-		
+	
 		
 		System.out.println("La directrice de la bibliothèque de " + villeBibToulouse+" est " + directeurBibToulouse.getPrenom() + " " + directeurBibToulouse.getNom() + " elle gagne " + directeurBibToulouse.getSalaire() + " euros depuis " + directeurBibToulouse.getDateEmbauche());
 		System.out.println("La bibliothèque de " + villeBibToulouse + " possède " + capaciteObjBibToulouse + " objects");
+		
+		/////EMPRUNTS////
+		
+		Emprunt emprunt1 = new Emprunt(dateEmbauche1, dateEmbauche4, objets[0], Membre21, bibToulouse);
+		System.out.println("L'objet " + emprunt1.getReference() + " a été emprunté le  " + emprunt1.getDateDebut() + "par " + emprunt1.getMembre().getPrenom() + " " + emprunt1.getMembre().getNom() + ", il doit être rendu le " + emprunt1.getDateFin());
 	}
 
 }

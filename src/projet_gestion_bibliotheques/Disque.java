@@ -28,7 +28,7 @@ public class Disque extends Objet{
 	}
 	@Override
 	  public String toString() {
-	    return super.getTitre()+ " dont l'interprète est "+ this.interprete + " sortie le " + this.dateDeSortie  ;
+	    return "Le Disque " + super.getTitre()+ " dont l'interprète est "+ this.interprete + " est sortie le " + this.dateDeSortie;
 	  }
 
 }

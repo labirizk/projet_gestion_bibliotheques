@@ -40,7 +40,7 @@ public class Livre extends Objet{
 	}
 	@Override
 	  public String toString() {
-	    return super.getTitre()+ " edité par "+ this.editeur + ". Titre" + super.getTitre();
+	    return "Le livre " + super.getTitre()+ " écrit par "+ this.auteur + "est enregistré sous la référence :" + super.getReference();
 	  }
 
 

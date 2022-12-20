@@ -31,7 +31,7 @@ public class Objet {
 	
 	@Override
 	  public String toString() {
-	    return this.getTitre()+ " dont la rérérence est "+ this.getReference();
+	    return "L'article" + this.getTitre()+ "est enregistré rérérence "+ this.getReference();
 	  }
 	
 }
