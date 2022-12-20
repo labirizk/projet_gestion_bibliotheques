@@ -9,7 +9,7 @@ import java.util.LinkedList;
 //import java.util.List;
 
 public class start1 {
-	public static void main(String args) {
+	public static void main(String[] args) {
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
@@ -58,8 +58,8 @@ public class start1 {
 		Employe employe12 = new Employe("M-Louise", "Marvin", "adresse employe 12", dateEmbauche1, 20000f, "salarie",
 				posteEmployePoly);
 
-		Membre Membreb11 = new Membre("Hanotin", "Ludovic", "571 Route de Toulouse,33400 Toulouse", dateEmbauche2);
-		Membre Membreb12 = new Membre("Abi Rizk", "Jean", "33 Rue Condillac,33000 Bordeaux", dateEmbauche2);
+		Membre Membre11 = new Membre("Hanotin", "Ludovic", "571 Route de Toulouse,33400 Toulouse", dateEmbauche2);
+		Membre Membre12 = new Membre("Abi Rizk", "Jean", "33 Rue Condillac,33000 Bordeaux", dateEmbauche2);
 		Membre Membre13 = new Membre("Lilo", "Lilia", "La vache,33400 Toulouse,", dateEmbauche2);
 
 		Membre Membre21 = new Membre("Nicalo", "Vivi", "La gare de Toulouse, 33400 Toulouse", dateEmbauche2);
@@ -74,15 +74,16 @@ public class start1 {
 		Membre Membre42 = new Membre("nom42", "prenom42", "adresse42", dateEmbauche2);
 		Membre Membre43 = new Membre("nom43", "prenom43", "adresse43", dateEmbauche2);
 
-		Objet object1 = new Objet("object1", 1L);
-		Objet object2 = new Objet("object1", 2L);
-		Objet object3 = new Objet("object1", 3L);
-		Objet object4 = new Objet("object1", 4L);
+		Objet objet1 = new Objet("objet1", 1L);
+		Objet objet2 = new Objet("objet1", 2L);
+		Objet objet3 = new Objet("objet1", 3L);
+		Objet objet4 = new Objet("objet1", 4L);
 
-		LinkedList<Objet> objectList1 = new LinkedList<Objet>();
-		LinkedList<Objet> objectList2 = new LinkedList<Objet>();
-		LinkedList<Objet> objectList3 = new LinkedList<Objet>();
-		LinkedList<Objet> objectList4 = new LinkedList<Objet>();
+		// Creation des Objet, Employe et Membre
+		LinkedList<Objet> objetList1 = new LinkedList<Objet>();
+		LinkedList<Objet> objetList2 = new LinkedList<Objet>();
+		LinkedList<Objet> objetList3 = new LinkedList<Objet>();
+		LinkedList<Objet> objetList4 = new LinkedList<Objet>();
 
 		LinkedList<Employe> empList1 = new LinkedList<Employe>();
 		LinkedList<Employe> empList2 = new LinkedList<Employe>();
@@ -94,20 +95,79 @@ public class start1 {
 		LinkedList<Membre> menList3 = new LinkedList<Membre>();
 		LinkedList<Membre> menList4 = new LinkedList<Membre>();
 
+		//Ajout employe dans bibio
 		empList1.add(employe1);
 		empList1.add(employe2);
 		empList1.add(employe3);
 		empList1.add(employe4);
 		empList1.add(employe5);
 		
+		empList2.add(employe6);
+		empList2.add(employe7);
+		empList2.add(employe8);
+		
+		empList3.add(employe9);
+		empList3.add(employe10);
+		
+		empList4.add(employe11);
+		empList4.add(employe12);
+		
+		//Ajout membre dans bibio
+		menList1.add(Membre11);
+		menList1.add(Membre12);
+		menList1.add(Membre13);
+		
+		menList2.add(Membre21);
+		menList2.add(Membre22);
+		menList2.add(Membre23);
+		
+		menList3.add(Membre31);
+		menList3.add(Membre32);
+		menList3.add(Membre33);
+		
+		menList4.add(Membre41);
+		menList4.add(Membre42);
+		menList4.add(Membre43);
 
-		Bibliotheque bibBezon = new Bibliotheque("Bezon", 250, 120000, 99, directeur1, empList1, menList1, objectList1);
+		Bibliotheque bibBezon = new Bibliotheque("Bezon", 250, 120000, 99, directeur1, empList1, menList1, objetList1);
 		Bibliotheque bibToulouse = new Bibliotheque("Toulouse", 200, 100000, 80, directeur2, empList2, menList2,
-				objectList2);
+				objetList2);
 		Bibliotheque bibVilleurbanne = new Bibliotheque("Villeurbanne", 150, 50000, 50, directeur3, empList3, menList3,
-				objectList3);
+				objetList3);
 		Bibliotheque bibSophia = new Bibliotheque("Sophia", 100, 80000, 40, directeur4, empList4, menList4,
-				objectList4);
+				objetList4);
+		
+		//////////////////////////////////////////////////////////////////////////////////
+		LocalDateTime s11 = LocalDateTime.parse("1927-01-01 08:00", formatter);
+        LocalDateTime s12 = LocalDateTime.parse("1932-01-02 08:00", formatter);
+        LocalDateTime sd11 = LocalDateTime.parse("1980-01-03 08:00", formatter);
+        LocalDateTime sd12 = LocalDateTime.parse("1973-01-04 08:00", formatter);
+        
+        //Polymorphisme
+
+        Objet li11 = new Livre("A la recherche du temps perdu",259713649525L, bibBezon ," Marcel Proust", "Albert Camus",
+                s11);
+        Objet li12 = new Livre("Voyage au bout de la nuit", 22697462L, bibToulouse, " Louis-Ferdinand Céline", "Guillaume Apollinaire",
+                s12);
+        Objet di11 = new Disque("Back in Black", 216336226L, bibVilleurbanne, "AC/DC", sd11);
+        Objet di121 = new Disque("The Dark Side of the Moon",2247962L,bibSophia, "Pink Floyd", sd12);
+        
+        ///////////////////////////////////////////////////////////////////////////////
+		
+		// println pour essayer le modèle de données et les classes
+		int capaciteObjBibToulouse = bibToulouse.getcapaciteObjets();
+		int capaciteVisBibToulouse = bibToulouse.getCapaciteVisiteurs();
+		Employe directeurBibToulouse = bibToulouse.getDirecteur();
+		LinkedList<Employe> lstEmpBibToulouse = bibToulouse.getListEmploye();
+		LinkedList<Membre> lstMemBibToulouse = bibToulouse.getListMembre();
+		LinkedList<Objet> lstObjBibToulouse = bibToulouse.getListObjet();
+		int nbEmpBibToulouse = bibToulouse.getNombreEmployes();
+		String villeBibToulouse = bibToulouse.getVille();
+		
+		
+		
+		System.out.println("La directrice de la bibliothèque de " + villeBibToulouse+" est " + directeurBibToulouse.getPrenom() + " " + directeurBibToulouse.getNom() + " elle gagne " + directeurBibToulouse.getSalaire() + " euros depuis " + directeurBibToulouse.getDateEmbauche());
+		System.out.println("La bibliothèque de " + villeBibToulouse + " possède " + capaciteObjBibToulouse + " objects");
 	}
 
 }
