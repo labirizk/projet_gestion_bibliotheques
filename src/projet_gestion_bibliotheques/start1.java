@@ -74,11 +74,6 @@ public class start1 {
 		Membre Membre42 = new Membre("nom42", "prenom42", "adresse42", dateEmbauche2);
 		Membre Membre43 = new Membre("nom43", "prenom43", "adresse43", dateEmbauche2);
 
-		Objet objet1 = new Objet("objet1", 1L);
-		Objet objet2 = new Objet("objet1", 2L);
-		Objet objet3 = new Objet("objet1", 3L);
-		Objet objet4 = new Objet("objet1", 4L);
-
 		// Creation des Objet, Employe et Membre
 		LinkedList<Objet> objetList1 = new LinkedList<Objet>();
 		LinkedList<Objet> objetList2 = new LinkedList<Objet>();

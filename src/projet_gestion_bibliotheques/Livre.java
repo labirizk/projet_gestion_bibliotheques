@@ -28,15 +28,16 @@ public class Livre extends Objet{
 	public void setDateDeParution(LocalDateTime dateDeParution) {
 		this.dateDeParution = dateDeParution;
 	}
+	
+	
+
 	public Livre(String titre, long reference, Bibliotheque bib, String auteur, String editeur,
 			LocalDateTime dateDeParution) {
-		super(titre, reference);
+		super(titre, reference, bib);
 		this.auteur = auteur;
 		this.editeur = editeur;
 		this.dateDeParution = dateDeParution;
 	}
-	
-	
 	@Override
 	  public String toString() {
 	    return super.getTitre()+ " edité par "+ this.editeur + ". Titre" + super.getTitre();
