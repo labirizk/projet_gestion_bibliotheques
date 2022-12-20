@@ -32,7 +32,7 @@ public class Bibliotheque {
 //Par contre, pour parcourir cette liste et trouver si la ville existe déjà il faut faire une boucle For.
 // Par conséquent, nous allons utiliser LinkedList afin de parcourir plus facilement la liste avec une boucle if.
 	 
-	 public static LinkedList<String> mesVilles = new LinkedList();
+	 public static LinkedList<String> mesVilles = new LinkedList<String>();
 	 
 	 
 	public String getVille() {
