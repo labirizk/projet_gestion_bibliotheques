@@ -132,7 +132,7 @@ public class start1 {
 		Bibliotheque bibSophia = new Bibliotheque("Sophia", 100, 80000, 40, directeur4, empList4, menList4,
 				objetList4);
 		
-		//////////////////////////////////////////////////////////////////////////////////
+		////////////////////////////////////Formatter la Date pour faciliter la création des objets//////////////////////////////////////////////
 		LocalDateTime s11 = LocalDateTime.parse("1927-01-01 08:00", formatter);
         LocalDateTime s12 = LocalDateTime.parse("1932-01-02 08:00", formatter);
         LocalDateTime sd11 = LocalDateTime.parse("1980-01-03 08:00", formatter);
@@ -179,8 +179,8 @@ public class start1 {
         		 System.out.println("L'interprète du disque est : "+((Disque)objet).getInterprete());
         	 }
          }  
-        ///////////////////// Faire polymorphgisme avec les fonctions toString//////////////////////////
-		
+        ///////////////////// Faire polymorphgisme avec les fonctions toString Poly Overriding //////////////////////////
+        //Le polymorphisme est la substitution à l'exécution un appel de la méthode toString de la classe mère  objet la méthode toString spécifique à chaque sous classe Livre et Disque. 
          
          for (Objet objet:objets) {
         	 System.out.println(objet.toString());
@@ -204,7 +204,7 @@ public class start1 {
 		/////EMPRUNTS////
 		
 		Emprunt emprunt1 = new Emprunt(dateEmbauche1, dateEmbauche4, objets[0], Membre21, bibToulouse);
-		System.out.println("L'objet " + emprunt1.getReference() + " a été emprunté le  " + emprunt1.getDateDebut() + "par " + emprunt1.getMembre().getPrenom() + " " + emprunt1.getMembre().getNom() + ", il doit être rendu le " + emprunt1.getDateFin());
+		System.out.println("L'objet " + emprunt1.getobjetEmprunte() + " a été emprunté le  " + emprunt1.getDateDebut() + "par " + emprunt1.getMembre().getPrenom() + " " + emprunt1.getMembre().getNom() + ", il doit être rendu le " + emprunt1.getDateFin());
 	}
 
 }

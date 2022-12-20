@@ -28,7 +28,7 @@ public class Objet {
 		this.reference = reference;
 		this.bib = bib;
 	}
-	
+	// nous redéfinisspns toString et nous l'utilisons plus tard avec le polymorphisme 
 	@Override
 	  public String toString() {
 	    return "L'article" + this.getTitre()+ "est enregistré rérérence "+ this.getReference();

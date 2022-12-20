@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Emprunt {
 	private LocalDateTime dateDebut;
 	private LocalDateTime dateFin;
-	private Objet reference;
+	private Objet objetEmprunte;
 	private Membre membre;
 	private Bibliotheque bib;
 	
@@ -22,11 +22,11 @@ public class Emprunt {
 	public void setDateFin(LocalDateTime dateFin) {
 		this.dateFin = dateFin;
 	}
-	public Objet getReference() {
-		return reference;
+	public Objet getobjetEmprunte() {
+		return objetEmprunte;
 	}
-	public void setReference(Objet reference) {
-		this.reference = reference;
+	public void setobjetEmprunte(Objet objetEmprunte) {
+		this.objetEmprunte = objetEmprunte;
 	}
 	public Membre getMembre() {
 		return membre;
@@ -41,11 +41,11 @@ public class Emprunt {
 		this.bib = bib;
 	}
 	
-	public Emprunt(LocalDateTime dateDebut, LocalDateTime dateFin, Objet reference, Membre membre, Bibliotheque bib) {
+	public Emprunt(LocalDateTime dateDebut, LocalDateTime dateFin, Objet objetEmprunte, Membre membre, Bibliotheque bib) {
 		super();
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
-		this.reference = reference;
+		this.objetEmprunte = objetEmprunte;
 		this.membre = membre;
 		this.bib = bib;
 	}
