@@ -143,17 +143,43 @@ public class start1 {
         LocalDateTime sd11 = LocalDateTime.parse("1980-01-03 08:00", formatter);
         LocalDateTime sd12 = LocalDateTime.parse("1973-01-04 08:00", formatter);
         
-        //Polymorphisme
+        //Polymorphisme Etape 1
 
-        Objet li11 = new Livre("A la recherche du temps perdu",259713649525L, bibBezon ," Marcel Proust", "Albert Camus",
-                s11);
-        Objet li12 = new Livre("Voyage au bout de la nuit", 22697462L, bibToulouse, " Louis-Ferdinand Céline", "Guillaume Apollinaire",
-                s12);
+        Objet li11 = new Livre("A la recherche du temps perdu",259713649525L, bibBezon ," Marcel Proust", "Albert Camus",s11);
+        Objet li12 = new Livre("Voyage au bout de la nuit", 22697462L, bibToulouse, " Louis-Ferdinand Céline", "Guillaume Apollinaire",s12);
         Objet di11 = new Disque("Back in Black", 216336226L, bibVilleurbanne, "AC/DC", sd11);
         Objet di121 = new Disque("The Dark Side of the Moon",2247962L,bibSophia, "Pink Floyd", sd12);
         
-        ///////////////////////////////////////////////////////////////////////////////
+        
+        // Polymorphisme Etape 2: allons placer nos objets dans une array objet.
+        
+        Objet [] objets = new Objet[4];
+       
+        objets[0] = new Livre("A la recherche du temps perdu",259713649525L, bibToulouse ," Marcel Proust", "Albert Camus",s11);
+        objets[1] = new Livre("Voyage au bout de la nuit", 22697462L, bibToulouse, " Louis-Ferdinand Céline", "Guillaume Apollinaire",s12);
+        objets[2] = new Disque("Back in Black", 216336226L, bibToulouse, "AC/DC", sd11);
+        objets[3] = new Disque("The Dark Side of the Moon",2247962L,bibToulouse, "Pink Floyd", sd12);
+        
+        // Je veux afficher tous les titres que comporte mon array on fait avec une boucle for.
+         for (Objet objet:objets) {
+        	 System.out.println("Le titre est : "+objet.getTitre());
+         }
+         
+         //On souhaite afficher uniquement les livres alors on va devoir utiliser une condition qui va contrôler si l’objet est une instance de la class Livre.
+
+         for (Objet objet:objets) {
+        	 if(objet instanceof Livre){
+        		 
+        		 System.out.println("Le titre est : "+((Livre)objet).getEditeur());
+        	 }
+        	 else {
+        		 System.out.println("Le titre est : "+((Disque)objet).getInterprete());
+        	 }
+         }
+        
+        ///////////////////// Faire polymorphgisme pour les fonctions toString//////////////////////////
 		
+         
 		// println pour essayer le modèle de données et les classes
 		int capaciteObjBibToulouse = bibToulouse.getcapaciteObjets();
 		int capaciteVisBibToulouse = bibToulouse.getCapaciteVisiteurs();
