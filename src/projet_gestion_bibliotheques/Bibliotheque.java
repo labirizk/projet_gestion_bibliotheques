@@ -132,7 +132,6 @@ public class Bibliotheque {
 	}
 
 	///  CONSTRUCTEURS
-	///  CONSTRUCTEURS
     public Bibliotheque(String ville, int capaciteVisiteurs, int capaciteObjets, int nombreEmployes, Employe directeur,
             LinkedList<Employe> listEmploye, LinkedList<Membre> listMembre, LinkedList<Objet> listObjet) {
         this.ville = ville;

@@ -19,7 +19,7 @@ public class Objet {
 		this.reference = reference;
 	}
 	
-	// un objet n'a jamais la meme reference dans deux bibliotheque différente
+	// un objet n'a jamais la meme reference dans deux bibliotheques différentes
 	
 	public Objet(String titre, long reference) {
 		this.titre = titre;
