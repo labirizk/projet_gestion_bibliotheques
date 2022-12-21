@@ -1,7 +1,8 @@
+Projet Gestion bibliothèque:
 
-
-
-Liste des Classes java:
+#############################
+## Liste des Classes java: ##
+#############################
 
 
 
@@ -97,4 +98,16 @@ Liste des Classes java:
 	  - Objet objetEmprunte
 	  - Membre membre
 	  - Bibliotheque bib
-	  
+
+
+Remarques sur les méthodes créer dans le projet:
+La méthode toString() renvoie une chaîne de caractères représentant l'objet
+
+Overriding est une forme de polymorphisme pour lier dynamiquement la méthode toString de la sous-classe en réponse à un appel de méthode toString d'un objet de la sous-classe référencé (livre et disque) par le type de la class mère Objet .
+A la compilation, Java vérifie que la méthode appelée existe dans la classe contenant l'objet.
+
+
+
+_____________________________________________________
+Projet réalisé par Lara Abi Rizk et Damien Nicolazic
+_____________________________________________________
